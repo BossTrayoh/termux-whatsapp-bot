@@ -34,12 +34,12 @@ const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'ORG:Owner Bot;\n' // the organization of the contact
             + 'TEL;type=CELL;type=VOICE;waid=:+62 852-8267-7885\n' // WhatsApp ID + phone number
             + 'END:VCARD'
-prefix = '.'
+prefix = ','
 blocked = []
 
 const config = {
-        botname: 'BocchiBot', // Your Name Bot
-        oname: 'NAZWA' // Your Name
+        botname: 'BiGgiSBOT', // Your Name Bot
+        oname: 'BissTrayoh' // Your Name
 }
 
 function kyun(seconds){
@@ -150,8 +150,8 @@ async function starts() {
         		const bisakah = ['Bisa','Tidak Bisa']
 		        const kapankah = ['Hari Lagi','Minggu Lagi','Bulan Lagi','Tahun Lagi']
 			const botNumber = client.user.jid
-			const ownerNumber = ["12542123926@s.whatsapp.net"] // replace this with your number
-			const nomorOwner = [ownerNumber]
+			const ownerNumber = ["254719409588"] // replace this with your number
+			constOwner  number  = [ ownerNumber ]
 			const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
@@ -160,10 +160,10 @@ async function starts() {
 			const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
 			const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
-			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
-			const isGroupAdmins = groupAdmins.includes(sender) || false
-			const isWelkom = isGroup ? welkom.includes(from) : false
-			const isNsfw = isGroup ? nsfw.includes(from) : false
+			const isBotGroupAdmins = groupAdmins.includes(botNumber) || true
+			const isGroupAdmins = groupAdmins.includes(sender) || true
+			const isWelkom = isGroup ? welkom.includes(from) : true
+			const isNsfw = isGroup ? nsfw.includes(from) : true
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
 
@@ -568,7 +568,7 @@ async function starts() {
 						teks += `╠➥ ${mem.jid.split('@')[0]}@s.whatsapp.net\n`
 						members_id.push(mem.jid)
 					}
-					reply('╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 BOCCHIBOT 〙')
+					reply('╔══✪〘 Mention All 〙✪══\n╠➥'+teks+'╚═〘 BiggiSBOT〙')
 					break
 				case 'send':
 					var pc = body.slice(6)
